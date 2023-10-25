@@ -1,0 +1,43 @@
+<ng-container>
+    <div class="container pt-5 mt-5">   
+        <div class="card w-50 mx-auto">
+            <h4 class="card-header">Create new account</h4>
+            <div class="card-body">
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+                    <div class="form-group">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" name="firstName" id="firstName" class="form-control"
+                         formControlName="firstName" />
+                         <p class="error" *ngIf="errMessage1">{{this.errMessage1}}</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" name="lastName" id="lastName" class="form-control"
+                         formControlName="lastName" />
+                         <p class="error" *ngIf="errMessage2">{{this.errMessage2}}</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"  class="form-label">Email</label>
+                        <input type="email" name="email" id="email" class="form-control"
+                         formControlName="email" (keyup)="onInputEmailChangeValue($event)" />
+                        <p class="error" *ngIf="errMessage3">{{this.errMessage3}}</p>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="password"  class="form-label">Password</label>
+                        <input type="password" name="password" id="password"
+                         class="form-control" 
+                         formControlName="password"(keyup)="onInputPasswordChangeValue($event)" />
+                        <p class="error" *ngIf="errMessage4">{{this.errMessage4}}</p>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign up</button>
+                 </form>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-container>
+    <div class="logIn">
+        <span>Have an account?</span>
+        <button type="button" class="btn btn-link" (click)="onLogin()">Login</button>
+    </div>
+</ng-container>

@@ -1,0 +1,21 @@
+<div class='col' >
+    <h4>Projects:</h4>
+</div>
+<div class="table-responsive">
+    <table class="table table-bordered" *ngIf="relatedProjects.length">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr app-project *ngFor="let project of relatedProjects"
+                [projectData]="project"
+                [projectId]="project.id">
+            </tr>
+        </tbody>
+    </table>
+</div>

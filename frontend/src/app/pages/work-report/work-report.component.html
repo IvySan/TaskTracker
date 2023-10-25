@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="table-responsive" >
+    <table class="table table-striped table-bordered">
+                <thead style=" background-color: rgb(163, 206, 249)" >
+                    <tr>
+                        <th colspan="3">
+                            <h1 >Tasks:</h1>
+                        </th>
+                        <th colspan="31">
+                            <h1 >Year: {{this.today.getFullYear()}} Month: {{this.today.getMonth() + 1}}</h1>
+                        </th>
+                    </tr>
+                </thead>
+                <thead class="thead-light" style=" background-color: rgb(210, 229, 248)" >
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>total time</th>
+                        <ng-container *ngFor="let day of days">
+                            <th>{{day}}</th>
+                        </ng-container>
+                    </tr>
+                </thead>
+                <tbody *ngIf="tasksWithDates$ | async as tasksWithDates" style=" background-color: rgb(210, 229, 248)">
+                    <tr *ngFor="let task of tasksWithDates" >
+                            <td>{{task.id}}</td>
+                            <td>{{task.name}}</td>
+                            <td>{{task.totalTime}}h</td>
+                            <ng-container *ngFor="let taskTime of task.times" >
+                                <td >{{ taskTime }}</td>
+                            </ng-container> 
+                    </tr>
+                </tbody>
+    </table>
+</div>   

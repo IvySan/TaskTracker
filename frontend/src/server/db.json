@@ -1,0 +1,336 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Ivana",
+      "lastName": "Petkovic",
+      "createdAt": "09.04.2023",
+      "updatedAt": "09.04.2023",
+      "password": "1234",
+      "email": "ivana@gmail.com",
+      "relatedTasksId": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "firstName": "Jovana",
+      "lastName": "Petkovic",
+      "createdAt": "09.04.2023",
+      "updatedAt": "09.04.2023",
+      "password": "4321",
+      "email": "jovana@gmail.com",
+      "relatedTasksId": [
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "firstName": "Marija",
+      "lastName": "Ilic",
+      "createdAt": "09.04.2023",
+      "updatedAt": "09.04.2023",
+      "password": "1111",
+      "email": "marija@gmail.com",
+      "relatedTasksId": [
+        1,
+        2
+      ]
+    },
+    {
+      "firstName": "Mila",
+      "lastName": "Pesic",
+      "createdAt": "27.4.2023",
+      "updatedAt": "27.4.2023",
+      "password": "3143",
+      "email": "mila@gmail.com",
+      "relatedTasksId": [],
+      "id": 4
+    },
+    {
+      "firstName": "Nikola",
+      "lastName": "Stojanovic",
+      "createdAt": "13.5.2023",
+      "updatedAt": "13.5.2023",
+      "password": "2222",
+      "email": "nikola@gmail.com",
+      "relatedTasksId": [],
+      "id": 5
+    },
+    {
+      "firstName": "Mara",
+      "lastName": "Maric",
+      "createdAt": "25.10.2023",
+      "updatedAt": "25.10.2023",
+      "password": "hfvt5",
+      "email": "mara@gmail.com",
+      "relatedTasksId": [],
+      "id": 6
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "taskStatus": "new",
+      "name": "task1",
+      "createdAt": "09.04.2023",
+      "updatedAt": "09.04.2023",
+      "relatedUsersId": [
+        1,
+        3
+      ],
+      "relatedProjectId": 2
+    },
+    {
+      "id": 2,
+      "taskStatus": "active",
+      "name": "task2",
+      "createdAt": "09.04.2023",
+      "updatedAt": "09.04.2023",
+      "relatedUsersId": [
+        1,
+        3
+      ],
+      "relatedProjectId": 1
+    },
+    {
+      "id": 3,
+      "taskStatus": "active",
+      "name": "task3",
+      "createdAt": "09.04.2023",
+      "updatedAt": "09.04.2023",
+      "relatedUsersId": [
+        2
+      ],
+      "relatedProjectId": 2
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Project1",
+      "createdAt": "9.4.2023.",
+      "updatedAt": "9.4.2023.",
+      "relatedTasksId": [
+        2
+      ],
+      "relatedUsersId": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Project2",
+      "createdAt": "9.4.2023.",
+      "updatedAt": "9.4.2023.",
+      "relatedTasksId": [
+        1,
+        3
+      ],
+      "relatedUsersId": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "dates": [
+    {
+      "id": 1,
+      "userId": 1,
+      "taskId": 1,
+      "times": [
+        0,
+        0,
+        2,
+        3,
+        7,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "totalTime": 20
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "taskId": 2,
+      "times": [
+        0,
+        0,
+        6,
+        5,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "totalTime": 16
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "taskId": 3,
+      "times": [
+        0,
+        0,
+        6,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "totalTime": 9
+    },
+    {
+      "id": 4,
+      "userId": 3,
+      "taskId": 1,
+      "times": [
+        0,
+        0,
+        2,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "totalTime": 5
+    },
+    {
+      "id": 5,
+      "userId": 3,
+      "taskId": 2,
+      "times": [
+        0,
+        0,
+        6,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "totalTime": 11
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<div class='col'>
+    <h4>Tasks:</h4>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+                <th>Enter the time</th>
+                <th>Date</th>
+                <th>Total time</th>
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr app-task *ngFor="let task of relatedTasks"
+            [taskData]="task"
+            [taskId]="task.id">             
+            </tr>
+        </tbody>
+    </table>
+ </div>   
+    
+
+
+
+        
+

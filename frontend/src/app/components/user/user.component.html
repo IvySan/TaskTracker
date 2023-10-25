@@ -1,0 +1,8 @@
+<div style="background-color: rgb(163, 206, 249)">
+    <div class="container py-2">
+        <h3>User: 
+            <span *ngIf="currentUser?.firstname || currentUser?.lastname">{{currentUser?.firstname + " " + currentUser?.lastname}}</span> </h3>
+        <h4>Email: {{currentUser?.email}}</h4>
+    </div>
+    <!-- <h5>Created at: {{currentUser?.createdAt}}</h5> -->
+</div> 

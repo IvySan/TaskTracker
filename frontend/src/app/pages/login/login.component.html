@@ -1,0 +1,41 @@
+<ng-container *ngIf="!loggedIn">
+    <div class="container pt-5 mt-5">   
+        <div class="card w-50 mx-auto">
+            <h4 class="card-header">Login to your account</h4>
+            <div class="card-body">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+                    <div class="form-group mb-3">
+                        <label for="email"  class="form-label">Email</label>
+                        <input type="email" name="email" id="email" class="form-control"
+                         formControlName="email" (keyup)="onInputEmailChangeValue($event)"/>
+                        <p class="error" *ngIf="errMessage1">{{this.errMessage1}}</p>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="password"  class="form-label">Password</label>
+                        <input type="password" name="password" id="password"
+                         class="form-control" 
+                         formControlName="password" (keyup)="onInputPasswordChangeValue($event)"/>
+                        <p class="error" *ngIf="errMessage2">{{this.errMessage2}}</p>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <ng-container *ngIf="notRegistered">
+                        <div class="notRegistered">
+                            Sorry, this account is not registered.
+                        </div>
+                    </ng-container>
+                 </form>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="!loggedIn">
+    <div class="signUp">
+        <div>Don't have an account?</div>
+        <button type="button" class="btn btn-link" (click)="onSignUp()">Sign up</button>
+    </div>
+</ng-container>
+
+
+<div class="alert alert-danger" *ngIf="loggedIn" >
+    <div class="error-message">You are already logged in!</div>
+</div>

@@ -1,0 +1,31 @@
+<td>{{task.name}}</td>
+<td>{{task.taskStatus}}</td>
+<td>{{task.createdAt}}</td>
+<td>{{task.updatedAt}}</td>
+<td>
+    <form [formGroup]="inputForm" (submit)="onSubmit()">
+            <input [value]="0" formControlName="inputNumber" class="form-control"/>
+            <button type="submit" class="btn btn-primary me-3">submit</button>
+            <button type="button" class="btn btn-primary me-3" (click)="onSave()">save</button>
+    </form>
+</td>
+<td>
+    <form>
+        <p>{{createDate()}}</p>
+        <p>{{this.todayTime}}h</p>
+    </form>
+</td>
+<td>
+    <form>
+        <p>{{this.totalTime}}h</p>
+    </form>  
+</td>
+<td>
+    <button type="button" class="btn btn-primary"
+            (click)="onClick1()">Show users on this task </button>
+</td>
+<td>
+    <button type="button" class="btn btn-primary"
+            (click)="onClick2()">Show project</button>
+</td>
+

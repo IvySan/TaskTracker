@@ -1,0 +1,6 @@
+<app-header></app-header>
+<div class='col-md-6'>
+    <h4>Users on this task:</h4>
+</div>
+<app-user *ngFor="let user of relatedUsers"
+[currentUserData]="user"></app-user>
